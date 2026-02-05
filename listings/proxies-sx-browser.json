@@ -1,0 +1,76 @@
+{
+  "id": "proxies-sx-browser",
+  "name": "Proxies.sx Antidetect Browser",
+  "description": "Isolated Camoufox browser sessions with unique fingerprints. $0.005/min. x402 payments.",
+  "longDescription": "Private isolated browser sessions running Camoufox (Firefox-based antidetect). Each session gets a unique fingerprint, clean storage, fresh cookies. Perfect for web automation, account management, scraping sites that require JavaScript. Sessions run in Docker containers — completely isolated from each other. Pay per minute with USDC. Note: This is a BROWSER service, not a proxy. Configure your own proxy if needed, or use with Proxies.sx mobile proxies.",
+  "endpoint": "https://browser.proxies.sx",
+  "docsUrl": "https://browser.proxies.sx/docs",
+  "pricing": {
+    "model": "per-minute",
+    "amount": "0.005",
+    "minimum": "0.075",
+    "currency": "USDC",
+    "perHour": "0.30",
+    "networks": [
+      {
+        "network": "solana",
+        "chainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+        "recipient": "BPxPRhHs6bLPB4Wvn1hQJvhMfKdTJ5CrhtpDN1qxoRMc",
+        "asset": "USDC",
+        "assetAddress": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+      },
+      {
+        "network": "base",
+        "chainId": "eip155:8453",
+        "recipient": "0x1fB1F2271e61652C3df7EfD9E8FE82De52fb5eb0",
+        "asset": "USDC",
+        "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+      }
+    ]
+  },
+  "category": "browser",
+  "tags": ["antidetect", "camoufox", "fingerprint", "automation", "scraping", "stealth", "isolated"],
+  "features": [
+    "Camoufox (Firefox-based antidetect)",
+    "Unique fingerprint per session",
+    "Isolated Docker containers",
+    "CDP (Chrome DevTools Protocol) compatible",
+    "Playwright/Puppeteer support",
+    "Screenshot and PDF export",
+    "Human-like typing simulation",
+    "Country locale setting (timezone, language)"
+  ],
+  "commands": {
+    "navigate": { "action": "navigate", "url": "https://example.com" },
+    "type": { "action": "type_slow", "selector": "input", "text": "hello" },
+    "click": { "action": "click", "selector": "button" },
+    "screenshot": { "action": "screenshot" },
+    "evaluate": { "action": "evaluate", "script": "document.title" }
+  },
+  "important": [
+    "NOT a proxy service — no proxies bundled",
+    "Country parameter = locale only (timezone, language), NOT IP location",
+    "Configure your own proxy if IP matters",
+    "Sessions auto-terminate after inactivity"
+  ],
+  "owner": {
+    "name": "Proxies.sx",
+    "github": "bolivian-peru",
+    "twitter": "sxproxies",
+    "telegram": "proxyforai",
+    "website": "https://proxies.sx"
+  },
+  "status": "active",
+  "featured": true,
+  "addedAt": "2025-06-01",
+  "updatedAt": "2026-02-05",
+  "x402": {
+    "discoveryUrl": "https://browser.proxies.sx/v1/sessions",
+    "flow": [
+      "POST /v1/sessions → 402 with price",
+      "Pay USDC on Solana or Base",
+      "POST /v1/sessions with Payment-Signature header",
+      "Receive session credentials + WebSocket URL"
+    ]
+  }
+}

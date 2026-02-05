@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-02-05",
+  "count": 2,
+  "services": [
+    {
+      "id": "proxies-sx-mobile",
+      "name": "Proxies.sx Mobile Proxy",
+      "description": "Real 4G/5G mobile proxies across 6 countries. HTTP + SOCKS5. Auto-rotation. x402 payments.",
+      "endpoint": "https://api.proxies.sx/v1/x402",
+      "docsUrl": "https://agents.proxies.sx/skill.md",
+      "pricing": {
+        "model": "per-gb",
+        "amount": "4.00",
+        "minimum": "0.40",
+        "currency": "USDC"
+      },
+      "category": "proxy",
+      "tags": ["mobile", "4g", "5g", "rotating", "residential", "scraping"],
+      "owner": {
+        "name": "Proxies.sx",
+        "twitter": "sxproxies",
+        "telegram": "proxyforai"
+      },
+      "status": "active",
+      "featured": true,
+      "detailsFile": "proxies-sx-mobile.json"
+    },
+    {
+      "id": "proxies-sx-browser",
+      "name": "Proxies.sx Antidetect Browser",
+      "description": "Isolated Camoufox browser sessions with unique fingerprints. $0.005/min. x402 payments.",
+      "endpoint": "https://browser.proxies.sx",
+      "docsUrl": "https://browser.proxies.sx/docs",
+      "pricing": {
+        "model": "per-minute",
+        "amount": "0.005",
+        "minimum": "0.075",
+        "currency": "USDC"
+      },
+      "category": "browser",
+      "tags": ["antidetect", "camoufox", "fingerprint", "automation", "stealth"],
+      "owner": {
+        "name": "Proxies.sx",
+        "twitter": "sxproxies",
+        "telegram": "proxyforai"
+      },
+      "status": "active",
+      "featured": true,
+      "detailsFile": "proxies-sx-browser.json"
+    }
+  ],
+  "networks": {
+    "solana": {
+      "name": "Solana",
+      "chainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "asset": "USDC",
+      "assetAddress": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+      "settlementTime": "~400ms",
+      "gasCost": "~$0.0001"
+    },
+    "base": {
+      "name": "Base",
+      "chainId": "eip155:8453",
+      "asset": "USDC",
+      "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "settlementTime": "~2s",
+      "gasCost": "~$0.01"
+    }
+  },
+  "categories": ["proxy", "browser", "scraper", "data", "automation", "other"],
+  "links": {
+    "marketplace": "https://agents.proxies.sx/marketplace/",
+    "submit": "https://github.com/bolivian-peru/marketplace-service-template/pulls",
+    "template": "https://github.com/bolivian-peru/marketplace-service-template",
+    "skillFile": "https://agents.proxies.sx/skill.md"
+  }
+}
