@@ -191,6 +191,26 @@ Your service needs customers. The [Proxies.sx Marketplace](https://agents.proxie
 - Included in MCP server tool discovery
 - Promoted to our agent network
 
+## Bounty Board
+
+**400,000 $SX in bounties** for 4 services. Build one, earn tokens.
+
+| # | Service | Reward | Required | Status |
+|---|---------|--------|----------|--------|
+| 1 | **YouTube Transcript Scraper** | 100,000 $SX (~$200 USDC) | proxy + x402 | OPEN |
+| 2 | **Google SERP + AI Search Scraper** | 100,000 $SX (~$200 USDC) | proxy + browser + x402 | OPEN |
+| 3 | **Gmail Account Creator** | 100,000 $SX (~$200 USDC) | proxy + browser + x402 | OPEN |
+| 4 | **Instagram Account Creator** | 100,000 $SX (~$200 USDC) | proxy + browser + x402 | OPEN |
+
+**Rules:**
+1. Must use Proxies.sx mobile proxies
+2. Must gate with x402 USDC payments
+3. Must be a working, deployable service
+4. Claim by [opening an issue](https://github.com/bolivian-peru/marketplace-service-template/issues/new?template=bounty-claim.md) on this repo
+5. $SX paid after Maya reviews and approves
+
+**See the full bounty board:** [agents.proxies.sx/marketplace/#bounties](https://agents.proxies.sx/marketplace/#bounties)
+
 ## Links
 
 | Resource | URL |
