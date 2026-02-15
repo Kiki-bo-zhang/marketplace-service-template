@@ -1,8 +1,8 @@
 {
   "id": "proxies-sx-browser",
   "name": "Proxies.sx Antidetect Browser",
-  "description": "Isolated Camoufox browser sessions with unique fingerprints. $0.005/min. x402 payments.",
-  "longDescription": "Private isolated browser sessions running Camoufox (Firefox-based antidetect). Each session gets a unique fingerprint, clean storage, fresh cookies. Perfect for web automation, account management, scraping sites that require JavaScript. Sessions run in Docker containers \u2014 completely isolated from each other. Pay per minute with USDC. Note: This is a BROWSER service, not a proxy. Configure your own proxy if needed, or use with Proxies.sx mobile proxies.",
+  "description": "Cloud Chrome stealth browser sessions with auto mobile proxy, unique fingerprints. $0.005/min. x402 payments.",
+  "longDescription": "Chrome stealth v2.0 (nodriver-based antidetect) browser sessions in the cloud. Each session gets a unique fingerprint, clean storage, and a real 4G/5G mobile proxy auto-allocated from our 155+ device pool across 6 countries (DE/GB/FR/ES/PL/US). No proxy configuration needed — every session includes a real mobile IP. Identity Bundles v1.1.0 let you save and restore complete browser identity across sessions (cookies, localStorage, fingerprint, proxy device binding via IMEI pinning). 226 tests passing. Pay per minute with USDC on Solana or Base.",
   "endpoint": "https://browser.proxies.sx",
   "docsUrl": "https://browser.proxies.sx/docs",
   "pricing": {
@@ -15,14 +15,14 @@
       {
         "network": "solana",
         "chainId": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
-        "recipient": "BPxPRhHs6bLPB4Wvn1hQJvhMfKdTJ5CrhtpDN1qxoRMc",
+        "recipient": "6eUdVwsPArTxwVqEARYGCh4S2qwW2zCs7jSEDRpxydnv",
         "asset": "USDC",
         "assetAddress": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
       },
       {
         "network": "base",
         "chainId": "eip155:8453",
-        "recipient": "0x742d35Cc6634C0532925a3b844Bc9e7595f1BaEf",
+        "recipient": "0xF8cD900794245fc36CBE65be9afc23CDF5103042",
         "asset": "USDC",
         "assetAddress": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
       }
@@ -31,7 +31,8 @@
   "category": "browser",
   "tags": [
     "antidetect",
-    "camoufox",
+    "chrome",
+    "nodriver",
     "fingerprint",
     "automation",
     "scraping",
@@ -39,10 +40,12 @@
     "isolated",
     "identity-bundle",
     "persistent-sessions",
-    "profile"
+    "profile",
+    "mobile-proxy-included"
   ],
   "features": [
-    "Camoufox (Firefox-based antidetect)",
+    "Chrome stealth v2.0 (nodriver-based antidetect)",
+    "Auto mobile proxy allocation (6 countries: DE/GB/FR/ES/PL/US)",
     "Unique fingerprint per session",
     "Isolated Docker containers",
     "CDP (Chrome DevTools Protocol) compatible",
@@ -50,8 +53,8 @@
     "Screenshot and PDF export",
     "Human-like typing simulation",
     "Country locale setting (timezone, language)",
-    "Identity Bundles \u2014 save/restore complete browser identity (v1.1.0)",
-    "Profile persistence \u2014 cookies, localStorage, fingerprint, proxy device binding"
+    "Identity Bundles — save/restore complete browser identity (v1.1.0)",
+    "Profile persistence — cookies, localStorage, fingerprint, proxy device binding"
   ],
   "commands": {
     "navigate": {
@@ -76,9 +79,8 @@
     }
   },
   "important": [
-    "NOT a proxy service \u2014 no proxies bundled",
-    "Country parameter = locale only (timezone, language), NOT IP location",
-    "Configure your own proxy if IP matters",
+    "Mobile proxy auto-allocated from 155+ device pool",
+    "Sessions include real 4G/5G mobile IP",
     "Sessions auto-terminate after inactivity"
   ],
   "owner": {
@@ -91,11 +93,11 @@
   "status": "active",
   "featured": true,
   "addedAt": "2025-06-01",
-  "updatedAt": "2026-02-08",
+  "updatedAt": "2026-02-15",
   "x402": {
     "discoveryUrl": "https://browser.proxies.sx/v1/sessions",
     "flow": [
-      "POST /v1/sessions \u2192 402 with price",
+      "POST /v1/sessions -> 402 with price",
       "Pay USDC on Solana or Base",
       "POST /v1/sessions with Payment-Signature header",
       "Receive session credentials + WebSocket URL",
@@ -103,5 +105,5 @@
       "POST /v1/sessions/:id/profile to save identity bundle"
     ]
   },
-  "version": "1.1.0"
+  "version": "2.0.0"
 }
